@@ -72,7 +72,7 @@
   .hero {
     height: 168mm; flex: none; position: relative;
     background: var(--dark);
-    background: url('photos/hero.png') center 32% / cover no-repeat;
+    background: url('photos/company_foselev.png') center 34% / cover no-repeat;
     overflow: hidden;
   }
   .hero::after {
@@ -200,10 +200,12 @@
     margin-bottom: 5mm; color: #fff;
   }
   .whiterule { width: 30mm; height: 1.6mm; background: #fff; margin-bottom: 6mm; }
-  .ph.small { height: 128mm; margin-top: auto; margin-bottom: 0;
-              background: #B9530F;
-              /* PHOTO 5 : background: url('photos/site.jpg') center / cover no-repeat; */ }
-  .panel.orange .ph.small .lbl { color: #F3C9AC; }
+  .credits { margin-top: auto; padding-bottom: 4mm; }
+  .credits .ch {
+    font-family: var(--title); font-size: 8mm; font-weight: 700;
+    letter-spacing: 1.4mm; text-transform: uppercase; margin-bottom: 3mm; color: #fff;
+  }
+  .credits p { font-size: 8.2mm; color: #FFF0E6; line-height: 1.36; }
 
   /* ---------------- PIED ---------------- */
   footer {
@@ -253,7 +255,7 @@
 
     <!-- ---------- 1. L'ENTREPRISE ---------- -->
     <section class="panel first">
-      <div class="ph" style="background: url('photos/company.png') center / cover no-repeat">
+      <div class="ph" style="background: url('photos/hero_316L.jpg') center center / cover no-repeat">
         <span class="slash"></span>
       </div>
       <div class="bar"></div>
@@ -293,8 +295,7 @@
 
     <!-- ---------- 2. LE PROCEDE ---------- -->
     <section class="panel">
-      <div class="ph">
-        <span class="lbl">Photo 3<br>photos/process.jpg</span>
+      <div class="ph" style="background: url('photos/process_head.jpg') 42% 62% / cover no-repeat">
         <span class="slash"></span>
       </div>
       <div class="bar"></div>
@@ -333,8 +334,7 @@
 
     <!-- ---------- 3. CE QUI CHANGERAIT ---------- -->
     <section class="panel">
-      <div class="ph">
-        <span class="lbl">Photo 4<br>photos/change.jpg</span>
+      <div class="ph" style="background: url('photos/change_weld.jpg') center center / cover no-repeat">
         <span class="slash"></span>
       </div>
       <div class="bar"></div>
@@ -401,9 +401,13 @@
           <p>A library of welding programmes that gains value over time.</p>
         </div>
       </div>
-      <div class="ph small">
-        <span class="lbl">Photo 5 &middot; photos/site.jpg</span>
-        <span class="slash"></span>
+      <div class="credits">
+        <div class="whiterule"></div>
+        <div class="ch">Image credits</div>
+        <p>Weld bead on 316L stainless steel: 4X4 Blazer 1776, Wikimedia Commons, CC BY 2.0.</p>
+        <p>Orbital head and welded tube: AliWiki199, Wikimedia Commons, CC BY-SA 4.0.</p>
+        <p>Pipe weld with heat affected zone: Ytrottier, Wikimedia Commons, CC BY-SA 3.0.</p>
+        <p>Industrial site: FOSELEV.</p>
       </div>
     </section>
 

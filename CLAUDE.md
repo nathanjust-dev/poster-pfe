@@ -359,3 +359,31 @@ large, la photo du bandeau tombe à environ 27 ppp.
 ⚠️ **Pas d'images prises sur internet.** Le dépôt est public et le poster passe devant un jury :
 reprendre une photo d'un site de constructeur ou d'un moteur de recherche, c'est reprendre une
 œuvre protégée sans licence. Voir `photos/A_DEPOSER.md` pour les trois options propres.
+
+---
+
+## 🖼️ Photos de la version brochure (25/08/2026)
+
+Les quatre emplacements sont remplis, voir `photos/README.md` pour le tableau complet des
+origines et licences.
+
+- **Bandeau** : photo FOSELEV extraite de la plaquette officielle.
+- **Panneaux 1 à 3** : trois photos de **Wikimedia Commons** sous licence Creative Commons,
+  toutes de soudage TIG orbital sur tube (cordon sur 316L, tête orbitale, cordon avec zone
+  affectée thermiquement).
+
+⚠️ **Le bloc IMAGE CREDITS en bas du panneau orange est une obligation légale**, pas une
+décoration. Les licences CC BY et CC BY-SA imposent d'afficher auteur et licence. Ne pas le
+supprimer tant que ces photos sont en place.
+
+⚠️ **`foselev.com` et `cimatsartec.fr` sont injoignables** depuis cet environnement (bloqués ou
+hors ligne), aussi bien en `curl` que par le navigateur intégré. Les photos FOSELEV ne peuvent
+donc venir que des PDF fournis par Nathan.
+
+### Écartées volontairement
+
+- La bande d'engrenages de la plaquette : hors sujet.
+- `AXXAIR closed weld head SATFX-76.jpg` : logo **AXXAIR** bien lisible, alors que le mémoire a
+  retenu **Orbitalum**. Afficher un concurrent appellerait une question du jury.
+- Toute image issue d'un moteur de recherche ou d'un site de constructeur : œuvre protégée sans
+  licence de réutilisation, indéfendable sur un dépôt public.
