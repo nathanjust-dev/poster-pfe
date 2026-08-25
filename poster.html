@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Poster PFE - Nathan JUST - Orbital TIG Welding</title>
+<style>
+  /* ============================================================
+     Poster PFE - Nathan JUST - Polytech Montpellier MSI 2023-2026
+     Format : 16:9 paysage, 1200 mm x 675 mm (vectoriel, PDF)
+     Lisibilite visee : 2 m
+     Typographie : Cambria (titres, serif) + Candara (texte, sans humaniste)
+     Parti pris : texte entierement redige en prose, sans tableau ni puces
+     ============================================================ */
+
+  @page { size: 1200mm 675mm; margin: 0; }
+
+  :root {
+    --ink:      #1B2733;
+    --ink-soft: #46545F;
+    --accent:   #D9531E;
+    --accent-d: #A93D11;
+    --blue:     #2E7CBF;
+    --line:     #D5DCE3;
+    --panel:    #F4F7F9;
+    --panel-2:  #EDF1F5;
+    --warm:     #FCF4EF;
+
+    --serif: Cambria, Constantia, "Book Antiqua", Georgia, serif;
+    --sans:  Candara, Corbel, "Gill Sans MT", "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 1200mm; height: 675mm;
+    background: #FFFFFF;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 10.2mm;
+    line-height: 1.38;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .poster {
+    width: 1200mm; height: 675mm;
+    padding: 15mm 20mm 0 20mm;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ---------------- HEADER ---------------- */
+  header {
+    display: grid;
+    grid-template-columns: 200mm 1fr 210mm;
+    align-items: center;
+    gap: 12mm;
+    padding-bottom: 8mm;
+  }
+  .logos { display: flex; align-items: center; gap: 14mm; }
+  .logos.right { justify-content: flex-end; }
+  .logos img { display: block; }
+  /* Le PNG Polytech est carre avec de larges marges vides : on recadre au bloc utile */
+  .lg-polytech-wrap { width: 76mm; height: 26mm; overflow: hidden; position: relative; flex: none; }
+  .lg-polytech-wrap img { position: absolute; width: 80.5mm; left: -3.9mm; top: -28.3mm; }
+  .lg-cfa   { height: 34mm; }
+  .lg-cimat { height: 22mm; }
+  .lg-fc    { height: 30mm; }
+
+  .titleblock { text-align: center; }
+  .kicker {
+    font-family: var(--sans);
+    font-size: 8.4mm; font-weight: 700; letter-spacing: 1.1mm;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 3mm;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: 25mm; font-weight: 700; line-height: 1.08;
+    color: var(--ink);
+  }
+  .subtitle {
+    font-family: var(--serif);
+    font-size: 11.5mm; color: var(--ink-soft); margin-top: 3mm;
+    font-weight: 400; font-style: italic;
+  }
+
+  .idbar {
+    border-top: 1.2mm solid var(--accent);
+    border-bottom: 0.4mm solid var(--line);
+    padding: 4.5mm 2mm;
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 10mm;
+    color: var(--ink-soft);
+  }
+  .idbar strong { color: var(--ink); font-weight: 700; }
+  .idbar .sep { color: #B9C3CC; padding: 0 3mm; }
+
+  /* ---------------- COLUMNS ---------------- */
+  main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15mm;
+    padding: 6mm 0 0 0;
+    min-height: 0;
+  }
+  .col { display: flex; flex-direction: column; gap: 4.4mm; min-height: 0; }
+  .col.spread { justify-content: space-between; }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 15mm; font-weight: 700; color: var(--ink);
+    display: flex; align-items: center; gap: 4.5mm;
+    margin-bottom: 1mm;
+  }
+  h2 .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 13mm; height: 13mm; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    font-family: var(--sans); font-size: 8.4mm; font-weight: 700; flex: none;
+    padding-bottom: 0.6mm;
+  }
+
+  h3 {
+    font-family: var(--serif);
+    font-size: 11.4mm; font-weight: 700; font-style: italic;
+    color: var(--accent-d);
+    margin-bottom: 0.5mm;
+  }
+
+  p { font-size: 10.2mm; text-align: justify; hyphens: auto; }
+  p + p { margin-top: 3mm; }
+  .lead {
+    font-family: var(--serif);
+    font-weight: 700; font-size: 12mm; color: var(--ink);
+    text-align: left;
+  }
+  .address {
+    font-size: 10mm; color: var(--ink-soft); font-style: italic; text-align: left;
+  }
+
+  /* ---------------- CARTES AVANT / APRES ---------------- */
+  .state { padding: 4.2mm 5.5mm; }
+  .state .tag {
+    font-family: var(--sans);
+    font-size: 8.4mm; font-weight: 700; letter-spacing: 0.9mm;
+    text-transform: uppercase; margin-bottom: 2.5mm;
+  }
+  .state p { font-size: 9.9mm; }
+  .state.today { background: var(--panel); border-left: 2.2mm solid #8A97A4; }
+  .state.today .tag { color: #64707C; }
+  .state.after { background: var(--warm); border-left: 2.2mm solid var(--accent); }
+  .state.after .tag { color: var(--accent-d); }
+
+  /* ---------------- PHOTO ---------------- */
+  .photo {
+    flex: 1; min-height: 90mm;
+    border: 0.8mm dashed var(--line);
+    background: var(--panel-2);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; color: #9AA7B4;
+    font-size: 9mm; gap: 2mm;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* ---------------- FIGURE (secteurs) ---------------- */
+  .figure { text-align: center; }
+  .figure svg { width: 84mm; height: auto; display: block; margin: 0 auto; }
+  .figcap {
+    font-family: var(--serif); font-style: italic;
+    font-size: 9.2mm; color: var(--ink-soft);
+    margin-top: 1mm; text-align: center;
+  }
+
+  /* ---------------- RECOMMANDATION ---------------- */
+  .reco { background: var(--accent); color: #fff; padding: 6mm 7mm; }
+  .reco .label {
+    font-family: var(--sans);
+    font-size: 8.2mm; text-transform: uppercase; letter-spacing: 1mm;
+    opacity: 0.9; font-weight: 700; margin-bottom: 2mm;
+  }
+  .reco .text {
+    font-family: var(--serif);
+    font-size: 14mm; font-weight: 700; line-height: 1.2;
+  }
+  .reco p {
+    font-size: 9.4mm; margin-top: 2.5mm; color: #fff;
+    text-align: left; opacity: 0.95;
+  }
+
+  /* ---------------- FOOTER ---------------- */
+  footer {
+    border-top: 0.4mm solid var(--line);
+    margin-top: 7mm;
+    padding: 4.5mm 2mm 6mm 2mm;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 8.8mm; color: #93A0AC;
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="logos">
+      <span class="lg-polytech-wrap"><img src="assets/logo-polytech.png" alt="Polytech Montpellier"></span>
+      <img class="lg-cfa" src="assets/LOGO-CFA-ENSUP-LR.png" alt="CFA ENSUP-LR">
+    </div>
+
+    <div class="titleblock">
+      <div class="kicker">Final Year Engineering Project</div>
+      <h1>Bringing Orbital TIG Welding into<br>an Industrial Piping Workshop</h1>
+      <div class="subtitle">A technical study, a plan to put it in place, and a recommendation</div>
+    </div>
+
+    <div class="logos right">
+      <img class="lg-fc" src="assets/LOGOS_France_chaudronnerie.webp" alt="France Chaudronnerie">
+      <img class="lg-cimat" src="assets/logo-cimat-sartec.jpg" alt="CIMAT SARTEC - Groupe FOSELEV">
+    </div>
+  </header>
+
+  <div class="idbar">
+    <div><strong>Nathan JUST</strong><span class="sep">|</span>Apprentice Engineer, Mechanical and Industrial Structures (MSI)<span class="sep">|</span>Class of 2023&ndash;2026</div>
+    <div>Academic tutor: <strong>&Eacute;ric ANGLARET</strong><span class="sep">|</span>Company tutor: <strong>Hugo PAGANO</strong></div>
+  </div>
+
+  <!-- ============ COLUMNS ============ -->
+  <main>
+
+    <!-- ---------- COLUMN 1 ---------- -->
+    <section class="col">
+      <h2><span class="num">1</span>The company</h2>
+
+      <p class="lead">CIMAT SARTEC, Rh&ocirc;ne Valley branch</p>
+
+      <p>I spent my apprenticeship at CIMAT SARTEC, a company of the FOSELEV Group working in
+         industrial maintenance and industrial piping. The branch serves customers in chemistry,
+         petrochemistry, manufacturing and steel making, on new build projects as well as on
+         fabrication and maintenance work. Its trades are industrial boilermaking, steel structures,
+         piping and pressure equipment, and piping is where its reputation was built.</p>
+
+      <p>The group behind it began in 1970 with a single lifting business and grew into an
+         independent industrial player of roughly 3,300 people, for a turnover of about 570 million
+         euros. It is organised in three divisions, Contracting, Service and Logistics, and
+         Maintenance, with branches across France and subsidiaries in Africa, the Middle East and
+         Asia.</p>
+
+      <p class="address">1155 boulevard du Grand Terme, 30133 Les Angles, France</p>
+
+      <p>My own job there was apprentice project engineer. I followed piping jobs from one end to the
+         other: understanding what the customer actually needed, pricing the work, consulting
+         suppliers, planning it, then following fabrication in the workshop and checking the parts
+         through to their installation on site.</p>
+
+      <div class="photo">
+        <div>PHOTO</div>
+        <div style="font-size:7.6mm">A typical piece of work by the company<br>(to be supplied)</div>
+      </div>
+    </section>
+
+    <!-- ---------- COLUMN 2 ---------- -->
+    <section class="col">
+      <h2><span class="num">2</span>The work, before and after</h2>
+
+
+      <p>Customers in chemistry, petrochemistry and the nuclear industry keep raising the bar: they
+         want cleaner welds, welds that come out the same every time, and proof of how each one was
+         made. Every pipe weld in the branch is still made by hand, and a manual weld will always
+         depend on the person holding the torch. Orbital TIG welding carries the torch around a pipe
+         that never moves.</p>
+
+      <h3>How the process works</h3>
+      <p>The welding head clamps around the tube and drives the electrode along the joint on its own.
+         The current is pulsed, alternating between a high and a low value, which stops the molten
+         pool from growing so large that it runs. Travelling all the way round, the torch passes
+         through every welding position in turn, so the circumference is cut into angular sectors
+         with their own settings. Argon shields the arc while the tube is purged inside, which is
+         what gives a sound, repeatable root.</p>
+
+      <div class="figure">
+        <svg viewBox="0 0 200 196" xmlns="http://www.w3.org/2000/svg">
+          <!-- les quatre secteurs, sens horaire depuis le nord-ouest -->
+          <path d="M100,110 L44.8,54.8 A78,78 0 0 1 155.2,54.8 Z" fill="#FFFFFF" stroke="#8A97A4" stroke-width="1"/>
+          <path d="M100,110 L155.2,54.8 A78,78 0 0 1 155.2,165.2 Z" fill="#D9531E"/>
+          <path d="M100,110 L155.2,165.2 A78,78 0 0 1 44.8,165.2 Z" fill="#B9C3CC"/>
+          <path d="M100,110 L44.8,165.2 A78,78 0 0 1 44.8,54.8 Z" fill="#2E7CBF"/>
+          <circle cx="100" cy="110" r="78" fill="none" stroke="#1B2733" stroke-width="1.8"/>
+          <line x1="100" y1="24" x2="100" y2="196" stroke="#1B2733" stroke-width="0.9" stroke-dasharray="8 5 2 5"/>
+          <line x1="14" y1="110" x2="186" y2="110" stroke="#1B2733" stroke-width="0.9" stroke-dasharray="8 5 2 5"/>
+          <!-- sens de rotation de la torche -->
+          <path d="M62,22 A48,48 0 0 1 138,22" fill="none" stroke="#1B2733" stroke-width="2.4"/>
+          <path d="M138,22 l-10,-5 l1.5,10.5 Z" fill="#1B2733"/>
+          <!-- reperes de secteur -->
+          <text x="100" y="77"  text-anchor="middle" font-family="Candara, sans-serif" font-size="21" font-weight="700" fill="#1B2733">S1</text>
+          <text x="132" y="119" text-anchor="middle" font-family="Candara, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">S2</text>
+          <text x="100" y="161" text-anchor="middle" font-family="Candara, sans-serif" font-size="21" font-weight="700" fill="#1B2733">S3</text>
+          <text x="68"  y="119" text-anchor="middle" font-family="Candara, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">S4</text>
+        </svg>
+        <div class="figcap">One turn of the torch: flat at the top (S1), vertical down (S2), overhead
+          underneath (S3), vertical up (S4), each with its own settings.</div>
+      </div>
+
+      <div class="state today">
+        <div class="tag">Where we stand today</div>
+        <p>All the pipe welding is manual, on procedures already qualified for 304L and 316L
+           stainless steels. The result rests on the welder's skill and concentration, part of the
+           radiographed welds still has to be taken up again, and what was really done is written
+           down by hand.</p>
+      </div>
+
+      <div class="state after">
+        <div class="tag">What orbital welding would change</div>
+        <p>The travel of the torch becomes programmed, so one weld comes out like the next. Welding
+           time would be roughly halved on our reference joint, repairs should become rarer, and the
+           machine records the real parameters of every weld by itself. In return, new procedures
+           and the operators themselves have to be qualified to ISO 14732.</p>
+      </div>
+    </section>
+
+    <!-- ---------- COLUMN 3 ---------- -->
+    <section class="col spread">
+      <h2><span class="num">3</span>What came out of it</h2>
+
+      <div>
+        <h3>What the study shows</h3>
+        <p>The process answers the real difficulty of welding a pipe that cannot be turned, which is
+           keeping hold of the weld pool, and both the pulsed current and the sector programming work
+           on exactly that. The regulatory road is well marked out, with the welding procedure
+           qualified first, then the operators to ISO 14732, then the usual inspections, so nothing
+           stands in the way. The automatic record of the welding parameters lands precisely where
+           customers are becoming demanding. And a complete offer has been secured for a closed
+           welding head covering the small and medium diameters made in the workshop.</p>
+      </div>
+
+      <div>
+        <h3>How it would be put in place</h3>
+        <p>Once the order is placed, the area is prepared with its power supply and its argon
+           distribution, then the equipment is delivered, installed and commissioned. Two people are
+           trained, an operator and the future welding supervisor, and both are qualified before the
+           first jobs go through the machine. The branch moves to a new workshop in 2026, which is a
+           good opportunity to design the orbital welding bay in from the start rather than squeeze
+           it into a layout that already exists.</p>
+      </div>
+
+      <div class="reco">
+        <div class="label">Recommendation</div>
+        <div class="text">Go ahead with the investment.</div>
+        <p>The welding times behind this study are estimates. They deserve to be confirmed by
+           measurement in the workshop before the order is signed.</p>
+      </div>
+
+      <div>
+        <h3>Where it could go next</h3>
+        <p>The same equipment could later follow the teams out on site, with the access and
+           environment constraints that come with it. An open welding head fed with filler wire would
+           extend the process to large diameters and thick walls. And the library of welding programs
+           built up job after job will slowly become a know-how of its own: unlike the machine, it
+           does not lose value with time.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>Polytech Montpellier &middot; Mechanical and Industrial Structures &middot; CFA ENSUP-LR</div>
+    <div>CIMAT SARTEC, FOSELEV Group &middot; Les Angles (30) &middot; 2026</div>
+  </footer>
+
+</div>
+</body>
+</html>
