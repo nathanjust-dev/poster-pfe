@@ -1,31 +1,29 @@
 # Photos de la version brochure
 
-Les quatre emplacements sont remplis. **Aucune image n'est reprise sans licence.**
+| Fichier | Emplacement | Origine |
+|---|---|---|
+| `hero_foselev_welder.jpg` | grand bandeau | Site FOSELEV, fournie par Nathan. Soudeur en tenue FOSELEV, arc allumé. |
+| `company_foselev.png` | panneau 1, « The company » | Plaquette FOSELEV officielle, extraite au `pdfimages`. |
+| `process_orbital_head.jpg` | panneau 2, « Orbital TIG welding » | Fournie par Nathan. Tête orbitale ouverte en action sur gros diamètre. |
+| `change_orbital_bead.jpg` | panneau 3, « What would change » | Fournie par Nathan. Tête ORBIWELD posant un cordon, gros plan. |
+| `result_316L.jpg` | panneau orange, en bas | Wikimedia Commons, *Orbital Welding 316L Stainless Steel*, **CC BY 2.0**, 4X4 Blazer 1776. |
 
-| Fichier | Emplacement | Origine | Licence |
-|---|---|---|---|
-| `company_foselev.png` | grand bandeau | Plaquette FOSELEV officielle, extraite au `pdfimages` | photo FOSELEV, usage interne autorisé par Nathan |
-| `hero_316L.jpg` | panneau 1, « The company » | Wikimedia Commons, *Orbital Welding 316L Stainless Steel* | **CC BY 2.0**, 4X4 Blazer 1776 |
-| `process_head.jpg` | panneau 2, « Orbital TIG welding » | Wikimedia Commons, *Soudage orbital, tube titane* | **CC BY-SA 4.0**, AliWiki199 |
-| `change_weld.jpg` | panneau 3, « What would change » | Wikimedia Commons, *Pipe root weld with HAZ (rotated)* | **CC BY-SA 3.0**, Ytrottier |
+## Le crédit en bas du panneau orange
 
-## Les crédits sont OBLIGATOIRES
+Il couvre `result_316L.jpg`, la seule image sous licence Creative Commons encore utilisée.
+La CC BY 2.0 **impose** d'afficher auteur et licence. Si cette photo est remplacée, la ligne peut
+disparaître avec elle.
 
-Les licences CC BY et CC BY-SA imposent d'afficher l'auteur et la licence. Le bloc
-**IMAGE CREDITS** en bas du panneau orange remplit cette obligation. **Ne pas le supprimer**
-tant que ces photos sont utilisées. Si une photo est remplacée, mettre la ligne à jour.
+## Provenance des photos fournies
 
-## Ce qui a été écarté, et pourquoi
+`process_orbital_head.jpg` et `change_orbital_bead.jpg` viennent de pages constructeur ou
+distributeur (le nom de fichier d'origine pointait vers une tête **ORBIWELD**, gamme Orbitalum).
+Ce sont des photos produit, donc protégées. Nathan les a fournies en connaissance de cause, et
+Orbitalum est le fournisseur retenu dans le mémoire, donc l'usage est au moins cohérent. Si le
+poster devait être diffusé plus largement qu'au jury, il vaudrait mieux demander l'accord du
+fournisseur ou les remplacer par des photos prises à l'atelier.
 
-- **La bande d'engrenages** de la plaquette FOSELEV : sans rapport avec le sujet (rejetée par Nathan).
-- **`AXXAIR closed weld head SATFX-76.jpg`** : belle photo, licence libre, mais le logo **AXXAIR**
-  y est bien lisible. Le mémoire a retenu **Orbitalum** : afficher un concurrent sur le poster
-  serait incohérent et appellerait une question du jury.
-- **Les images trouvées via un moteur de recherche** ou sur les sites de constructeurs : œuvres
-  protégées, sans licence de réutilisation. Le dépôt est public, ce n'est pas défendable.
+## Écartées
 
-## Si tu veux faire mieux
-
-Tes **propres photos** prises à l'atelier resteraient la meilleure option : zéro question de
-licence, plus de crédits à afficher, et c'est ton terrain que le jury voit. Il suffirait alors de
-remplacer les fichiers et de vider le bloc crédits.
+- La bande d'engrenages de la plaquette FOSELEV : hors sujet.
+- La photo de tête **AXXAIR** de Wikimedia Commons : logo d'un concurrent d'Orbitalum bien lisible.

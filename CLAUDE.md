@@ -387,3 +387,22 @@ donc venir que des PDF fournis par Nathan.
   retenu **Orbitalum**. Afficher un concurrent appellerait une question du jury.
 - Toute image issue d'un moteur de recherche ou d'un site de constructeur : œuvre protégée sans
   licence de réutilisation, indéfendable sur un dépôt public.
+
+---
+
+## 🖼️ Photos, état final (25/08/2026)
+
+Nathan a fourni trois photos qui remplacent la plupart de mes trouvailles Wikimedia. Voir
+`photos/README.md` pour le tableau complet.
+
+- **Bandeau** : soudeur en tenue FOSELEV, arc allumé, prise sur le site FOSELEV.
+- **Panneau 1** : site industriel FOSELEV (plaquette officielle).
+- **Panneau 2** : tête orbitale ouverte en action sur gros diamètre.
+- **Panneau 3** : tête ORBIWELD posant un cordon, gros plan.
+- **Panneau orange, bas** : cordon orbital fini sur 316L, seule image encore sous licence
+  Creative Commons (CC BY 2.0), d'où la ligne de crédit conservée juste en dessous.
+
+⚠️ Les deux photos de matériel viennent de pages constructeur ou distributeur : ce sont des
+**photos produit protégées**. Nathan les a fournies en connaissance de cause et Orbitalum est le
+fournisseur retenu dans le mémoire, donc c'est cohérent. Pour une diffusion plus large que le
+jury, demander l'accord du fournisseur ou les remplacer par des photos d'atelier.
