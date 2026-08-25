@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Poster PFE - Nathan JUST - version brochure FOSELEV</title>
+<style>
+  /* ============================================================
+     Poster PFE - Nathan JUST - VERSION BROCHURE
+     Reprend la charte de la brochure FOSELEV Maintenance
+     (voir "exemple brochure/IMG_2279.jpeg" et IMG_2280.jpeg)
+
+     Format : 16:9 paysage, 1200 mm x 675 mm, 1 page, vectoriel.
+
+     Signatures graphiques reprises du modele :
+       - blanc pur + orange EB6F25 + photos sombres
+       - coin biseaute sur les photos et les blocs orange
+       - petit carre a barre oblique pose aux angles
+       - trait orange epais et court au-dessus de chaque titre
+       - titres en capitales geometriques legeres tres interlettrees
+       - pastilles orange a pictogramme blanc devant chaque ligne
+       - un panneau orange plein bord a bord (ici : le resultat)
+
+     ⚠️ PHOTOS : voir le bloc "PHOTOS A DEPOSER" plus bas.
+     ============================================================ */
+
+  @page { size: 1200mm 675mm; margin: 0; }
+
+  :root {
+    --orange:   #EB6F25;
+    --orange-d: #C85A16;
+    --ink:      #1A1A1A;
+    --grey:     #58595B;
+    --grey-l:   #8E8F91;
+    --rule:     #DEDEDE;
+    --dark:     #26282C;
+
+    /* Century Gothic = equivalent Windows du geometrique de la brochure */
+    --title:   "Century Gothic", Questrial, Futura, "Gill Sans MT", sans-serif;
+    /* Franklin Gothic Heavy = le gras du titre de couverture. ATTENTION : les noms
+       "Franklin Gothic Demi Cond" et "... Medium Cond" ne resolvent PAS sous Chrome. */
+    --display: "Franklin Gothic Heavy", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    --body:    Corbel, Candara, "Gill Sans MT", sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 1200mm; height: 675mm;
+    background: #FFFFFF; color: var(--ink);
+    font-family: var(--body);
+    line-height: 1.32;
+    -webkit-font-smoothing: antialiased;
+  }
+  .poster { width: 1200mm; height: 675mm; display: flex; flex-direction: column; overflow: hidden; }
+
+  /* ---------------- BANDEAU LOGOS ---------------- */
+  .topbar {
+    height: 60mm; flex: none;
+    padding: 0 26mm;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logos { display: flex; align-items: center; gap: 13mm; }
+  .logos img { display: block; }
+  /* Le PNG Polytech est carre avec de larges marges vides : on recadre au bloc utile */
+  .lg-polytech-wrap { width: 68mm; height: 23mm; overflow: hidden; position: relative; flex: none; }
+  .lg-polytech-wrap img { position: absolute; width: 72.3mm; left: -3.5mm; top: -25.4mm; }
+  .lg-cfa   { height: 29mm; }
+  .lg-cimat { height: 19mm; }
+  .lg-fc    { height: 25mm; }
+
+  /* ---------------- BANDEAU HERO ---------------- */
+  .hero {
+    height: 168mm; flex: none; position: relative;
+    background: var(--dark);
+    /* PHOTO 1 : decommenter la ligne suivante une fois photos/hero.jpg depose
+       background: url('photos/hero.jpg') center 40% / cover no-repeat; */
+    overflow: hidden;
+  }
+  .hero::after {
+    /* voile sombre pour que le texte blanc reste lisible sur la photo */
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(20,20,20,0.78) 0%, rgba(20,20,20,0.42) 55%, rgba(20,20,20,0.62) 100%);
+  }
+  .hero > * { position: relative; z-index: 2; }
+
+  .herotitle {
+    position: absolute; left: 26mm; top: 26mm; z-index: 2;
+    max-width: 700mm;
+  }
+  .kicker {
+    font-family: var(--title);
+    font-size: 9mm; letter-spacing: 2.6mm; text-transform: uppercase;
+    color: var(--orange); font-weight: 700; margin-bottom: 6mm;
+  }
+  .titleblock {
+    background: var(--orange); color: #fff;
+    padding: 9mm 14mm 10mm 14mm;
+    display: inline-block;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20mm), calc(100% - 20mm) 100%, 0 100%);
+  }
+  h1 {
+    font-family: var(--display);
+    font-size: 34mm; line-height: 1.04; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.4mm;
+  }
+  .heroid {
+    position: absolute; right: 26mm; bottom: 24mm; z-index: 2;
+    text-align: right; color: #fff;
+  }
+  .heroid .nm {
+    font-family: var(--title); font-size: 15mm; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.4mm; margin-bottom: 3mm;
+  }
+  .heroid .ln { font-size: 10mm; color: #E4E4E4; }
+  .heroid .rule { width: 60mm; height: 1.4mm; background: #fff; margin: 5mm 0 5mm auto; }
+
+  /* ---------------- PANNEAUX ---------------- */
+  .panels { flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; min-height: 0; }
+  .panel { padding: 0 26mm; display: flex; flex-direction: column; min-height: 0; }
+  .panel.first { padding-left: 26mm; }
+  .panel.orange {
+    background: var(--orange); color: #fff;
+    padding: 0 26mm;
+  }
+
+  /* photo de panneau, coin superieur droit biseaute */
+  .ph {
+    position: relative; width: 100%; height: 116mm; flex: none;
+    background: var(--dark);
+    clip-path: polygon(0 0, calc(100% - 21mm) 0, 100% 21mm, 100% 100%, 0 100%);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 9mm;
+  }
+  .ph .lbl {
+    font-family: var(--title); font-size: 7.6mm; letter-spacing: 1mm;
+    text-transform: uppercase; color: #6E7176; text-align: center;
+  }
+  /* petit carre a barre oblique, signature de la brochure */
+  .slash {
+    position: absolute; right: 0; bottom: 0; width: 17mm; height: 17mm;
+    background: #fff;
+  }
+  .slash::before {
+    content: ""; position: absolute; left: 3.5mm; top: 3.5mm;
+    width: 10mm; height: 10mm;
+    background: linear-gradient(45deg, transparent 44%, var(--orange) 44%, var(--orange) 56%, transparent 56%);
+  }
+  .panel.orange .slash { background: var(--orange); }
+  .panel.orange .slash::before {
+    background: linear-gradient(45deg, transparent 44%, #fff 44%, #fff 56%, transparent 56%);
+  }
+
+  .bar { width: 30mm; height: 2.6mm; background: var(--orange); margin-bottom: 7mm; flex: none; }
+  .panel.orange .bar { background: #fff; }
+
+  h2 {
+    font-family: var(--title);
+    font-size: 16mm; font-weight: 400; line-height: 1.14;
+    text-transform: uppercase; letter-spacing: 1.6mm;
+    color: var(--ink); margin-bottom: 8mm; flex: none;
+  }
+  .panel.orange h2 { color: #fff; }
+
+  /* ---------------- LIGNES A PASTILLE ---------------- */
+  .rows { display: flex; flex-direction: column; gap: 5.5mm; }
+  .row { display: flex; align-items: flex-start; gap: 6mm; }
+  .tile {
+    flex: none; width: 22mm; height: 22mm; border-radius: 1.6mm;
+    background: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .panel.orange .tile { background: #fff; }
+  .tile svg { width: 13mm; height: 13mm; display: block; }
+  .row p { font-size: 10.2mm; color: var(--grey); padding-top: 1.4mm; }
+  .panel.orange .row p { color: #FFF1E8; }
+  .row p b { color: var(--ink); font-weight: 700; }
+  .panel.orange .row p b { color: #fff; }
+
+  /* ---------------- ENCART ORANGE BISEAUTE ---------------- */
+  .tag {
+    margin-top: auto; background: var(--orange); color: #fff;
+    padding: 10mm 11mm 9mm 17mm;
+    clip-path: polygon(16mm 0, 100% 0, 100% 100%, 0 100%, 0 16mm);
+  }
+  .tag .h {
+    font-family: var(--title); font-size: 8.4mm; font-weight: 700;
+    letter-spacing: 1.4mm; text-transform: uppercase; margin-bottom: 3mm;
+  }
+  .tag p { font-size: 9.6mm; color: #FFEEE3; }
+
+  /* ---------------- PANNEAU RESULTAT ---------------- */
+  .verdict {
+    font-family: var(--display); font-size: 23mm; line-height: 1.06; font-weight: 400;
+    text-transform: uppercase; margin-bottom: 5mm;
+  }
+  .verdict-note { font-size: 9.6mm; color: #FFEEE3; margin-bottom: 10mm; }
+  .sub {
+    font-family: var(--title); font-size: 9mm; font-weight: 700;
+    letter-spacing: 1.6mm; text-transform: uppercase;
+    margin-bottom: 5mm; color: #fff;
+  }
+  .whiterule { width: 30mm; height: 1.6mm; background: #fff; margin-bottom: 6mm; }
+  .ph.small { height: 128mm; margin-top: auto; margin-bottom: 0;
+              background: #B9530F;
+              /* PHOTO 5 : background: url('photos/site.jpg') center / cover no-repeat; */ }
+  .panel.orange .ph.small .lbl { color: #F3C9AC; }
+
+  /* ---------------- PIED ---------------- */
+  footer {
+    height: 32mm; flex: none;
+    padding: 0 26mm;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 8.6mm; color: var(--grey-l);
+    border-top: 0.4mm solid var(--rule);
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ============ BANDEAU LOGOS ============ -->
+  <div class="topbar">
+    <div class="logos">
+      <span class="lg-polytech-wrap"><img src="assets/logo-polytech.png" alt="Polytech Montpellier"></span>
+      <img class="lg-cfa" src="assets/LOGO-CFA-ENSUP-LR.png" alt="CFA ENSUP-LR">
+    </div>
+    <div class="logos">
+      <img class="lg-fc" src="assets/LOGOS_France_chaudronnerie.webp" alt="France Chaudronnerie">
+      <img class="lg-cimat" src="assets/logo-cimat-sartec.jpg" alt="CIMAT SARTEC - Groupe FOSELEV">
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <div class="hero">
+    <div class="ph lbl" style="position:absolute; inset:0; height:100%; margin:0; clip-path:none;
+         display:flex; align-items:center; justify-content:center; z-index:1;">
+      <span class="lbl" style="font-size:9mm">Photo 1 &middot; bandeau &middot; photos/hero.jpg</span>
+    </div>
+
+    <div class="herotitle">
+      <div class="kicker">Final Year Engineering Project</div>
+      <div class="titleblock">
+        <h1>Orbital TIG welding<br>for industrial piping</h1>
+      </div>
+    </div>
+
+    <div class="heroid">
+      <div class="nm">Nathan JUST</div>
+      <div class="rule"></div>
+      <div class="ln">Apprentice Engineer, Mechanical and Industrial Structures</div>
+      <div class="ln">Polytech Montpellier &middot; Class of 2023&ndash;2026</div>
+      <div class="ln">Academic tutor: &Eacute;ric ANGLARET &middot; Company tutor: Hugo PAGANO</div>
+    </div>
+  </div>
+
+  <!-- ============ PANNEAUX ============ -->
+  <div class="panels">
+
+    <!-- ---------- 1. L'ENTREPRISE ---------- -->
+    <section class="panel first">
+      <div class="ph">
+        <span class="lbl">Photo 2<br>photos/company.jpg</span>
+        <span class="slash"></span>
+      </div>
+      <div class="bar"></div>
+      <h2>The company</h2>
+      <div class="rows">
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h8a6 6 0 0 0 6-6V5"/>
+            <path d="M4 15v8"/><path d="M14 5h8"/></svg></span>
+          <p><b>CIMAT SARTEC</b>, FOSELEV Group. Industrial piping and maintenance.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/>
+            <path d="M10 21v-6h4v6"/></svg></span>
+          <p>Chemical, petrochemical, manufacturing and steel industries.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v12H3z"/><path d="M3 11h18"/>
+            <path d="M8 7V4h8v3"/></svg></span>
+          <p>Boilermaking, steel structures, piping and pressure equipment.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/>
+            <circle cx="12" cy="10" r="2.6"/></svg></span>
+          <p>1155 boulevard du Grand Terme, 30133 Les Angles.</p>
+        </div>
+      </div>
+      <div class="tag">
+        <div class="h">My role</div>
+        <p>Apprentice project engineer: estimating, supplier consultation, planning, fabrication
+           follow-up and inspection, through to installation on site.</p>
+      </div>
+    </section>
+
+    <!-- ---------- 2. LE PROCEDE ---------- -->
+    <section class="panel">
+      <div class="ph">
+        <span class="lbl">Photo 3<br>photos/process.jpg</span>
+        <span class="slash"></span>
+      </div>
+      <div class="bar"></div>
+      <h2>Orbital TIG welding</h2>
+      <div class="rows">
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="5" ry="9"/>
+            <path d="M3 12h18"/><path d="M12 3v18"/></svg></span>
+          <p>Torch carried right around a pipe held in <b>fixed position</b>.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M2 16h4l3-9 4 14 3-9h6"/></svg></span>
+          <p><b>Pulsed current</b>: the molten pool stays under control.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/>
+            <path d="M12 3v18"/><path d="M3 12h18"/></svg></span>
+          <p><b>Four angular sectors</b>, one set of parameters for each welding position.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 1 9 9v9H3v-9a9 9 0 0 1 9-9Z"/>
+            <path d="M8 21v-6h8v6"/></svg></span>
+          <p>Enclosed head, argon shielding and <b>back purging</b> of the root.</p>
+        </div>
+      </div>
+      <div class="tag">
+        <div class="h">Scope studied</div>
+        <p>Austenitic stainless steel 304L and 316L, small and medium diameters, the everyday
+           production of the workshop.</p>
+      </div>
+    </section>
+
+    <!-- ---------- 3. CE QUI CHANGERAIT ---------- -->
+    <section class="panel">
+      <div class="ph">
+        <span class="lbl">Photo 4<br>photos/change.jpg</span>
+        <span class="slash"></span>
+      </div>
+      <div class="bar"></div>
+      <h2>What would change</h2>
+      <div class="rows">
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c3-4 6 4 9 0s6 4 9 0"/>
+            <path d="M3 9c3-4 6 4 9 0s6 4 9 0"/></svg></span>
+          <p><b>Today</b>: every pipe weld made by hand, the result tied to the welder.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M3 7h18"/>
+            <path d="M3 17h18"/></svg></span>
+          <p><b>Tomorrow</b>: programmed travel, a bead that comes out the same every time.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3.5 2"/></svg></span>
+          <p>Roughly <b>half the welding time</b> on the joint taken as a reference.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v18H5z"/>
+            <path d="M9 8h6"/><path d="M9 12h6"/><path d="M9 16h3"/></svg></span>
+          <p>Real welding parameters <b>logged automatically</b>, weld after weld.</p>
+        </div>
+      </div>
+      <div class="tag">
+        <div class="h">Compliance path</div>
+        <p>Welding procedure qualified first, then the operators to ISO 14732, then the usual
+           inspections. Nothing stands in the way.</p>
+      </div>
+    </section>
+
+    <!-- ---------- 4. LE RESULTAT (panneau orange) ---------- -->
+    <section class="panel orange">
+      <div style="height:116mm; flex:none; display:flex; flex-direction:column; justify-content:center">
+        <div class="whiterule"></div>
+        <div class="verdict">Worth the<br>investment</div>
+        <div class="verdict-note">Welding times to be confirmed by measurement in the workshop
+          before the order is signed.</div>
+      </div>
+      <div class="bar"></div>
+      <h2>What comes next</h2>
+      <div class="rows">
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#EB6F25" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20V9l6-5 6 5v11"/>
+            <path d="M10 20v-5h4v5"/></svg></span>
+          <p>Welding on site, alongside the teams.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#EB6F25" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M14 6l6 6-6 6"/></svg></span>
+          <p>Open head fed with wire for large diameters and thick walls.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#EB6F25" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M8 5v14"/>
+            <path d="M12 9h5"/><path d="M12 13h5"/></svg></span>
+          <p>A library of welding programmes that gains value over time.</p>
+        </div>
+      </div>
+      <div class="ph small">
+        <span class="lbl">Photo 5 &middot; photos/site.jpg</span>
+        <span class="slash"></span>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div>Polytech Montpellier &middot; Mechanical and Industrial Structures &middot; CFA ENSUP-LR</div>
+    <div>CIMAT SARTEC, FOSELEV Group &middot; Les Angles (30) &middot; 2026</div>
+  </footer>
+
+</div>
+</body>
+</html>

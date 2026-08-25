@@ -243,3 +243,62 @@ Budget de texte révisé : **environ 240 mots** (contre 130 en v3 et 600 en v2).
 
 ⚠️ **La copie Canva `DAHTRv_HTzk` est désormais périmée** : elle contient la v3. Réimporter et
 refaire les trois corrections de conversion si on veut la remettre à niveau.
+
+---
+
+## 🟠 Version brochure (25/08/2026) — variante
+
+Deuxième version **en parallèle**, qui reprend la charte de la brochure commerciale
+**FOSELEV Maintenance** (Nathan a confirmé que c'était validé côté entreprise). La v3.1 reste
+intacte de son côté : les deux versions coexistent.
+
+| Fichier | Rôle |
+|---|---|
+| `poster_brochure.html` | source de la variante |
+| `Poster_PFE_Nathan_JUST_brochure.pdf` | le PDF, mêmes 1200 × 675 mm |
+| `generer_poster_brochure.bat` | régénération |
+| `photos/A_DEPOSER.md` | les 5 photos attendues et où elles vont |
+| `apercu_brochure.png` | aperçu |
+
+⚠️ Le dossier `exemple brochure/` (photos de la brochure papier, sources du design) est
+**volontairement dans `.gitignore`** : c'est du matériel commercial FOSELEV, sans intérêt à le
+republier sur un dépôt public.
+
+### Ce qui a été relevé sur la brochure, et repris
+
+- **Orange `#EB6F25`**, échantillonné sur le logo CIMAT SARTEC et non sur la photo de la brochure :
+  l'éclairage du bureau y fausse tout, le papier blanc y ressort à `#D5DFE0`.
+- **Coin biseauté** sur les photos (haut-droit) et les encarts orange (haut-gauche).
+- **Petit carré à barre oblique** posé à l'angle des photos.
+- **Trait orange épais et court** au-dessus de chaque titre de section.
+- **Titres en capitales géométriques légères très interlettrées.**
+- **Pastilles orange carrées à pictogramme blanc** devant chaque ligne.
+- **Un panneau orange plein bord à bord**, ici le résultat plutôt que le contact.
+
+### Polices, et le piège rencontré
+
+| Rôle | Police | Fichier Windows |
+|---|---|---|
+| Titre de couverture | **Franklin Gothic Heavy** | `FRAHV.TTF` |
+| Titres de section | **Century Gothic** | `GOTHIC.TTF` |
+| Texte courant | **Corbel** | `corbel.ttf` |
+
+⚠️ **Piège** : les noms `"Franklin Gothic Demi Cond"` et `"Franklin Gothic Medium Cond"`
+**ne résolvent pas** sous Chrome, alors que les fichiers existent bien dans `C:\Windows\Fonts`.
+La requête retombe silencieusement sur Arial Narrow. Les noms qui fonctionnent sont
+`"Franklin Gothic Heavy"`, `"Franklin Gothic Medium"` (qui donne en réalité `FranklinGothic-Demi`)
+et `"Franklin Gothic Book"`. Bahnschrift résout mais s'embarque en **Type 3**, à éviter dans un PDF
+destiné à l'impression. Toujours vérifier avec `pdffonts` ce qui est réellement embarqué.
+
+### Écart assumé avec les règles de la v3.1
+
+Cette variante **réintroduit des listes** (les lignes à pastille), ce que Nathan avait écarté sur
+la v3.1. C'est délibéré : c'est la signature de la brochure, et il a choisi cette option en
+connaissance de cause. En contrepartie, **les dessins du procédé disparaissent** (tête orbitale,
+roue des secteurs, vignettes avant/après). Ils restent disponibles dans `poster.html`.
+
+### Reste à faire sur cette variante
+
+- [ ] Déposer les **5 photos** (voir `photos/A_DEPOSER.md`), puis décommenter les lignes
+      `background` correspondantes et retirer les `<span class="lbl">`.
+- [ ] Choisir avec Nathan **laquelle des deux versions** part au secrétariat.
