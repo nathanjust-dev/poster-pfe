@@ -266,8 +266,8 @@ republier sur un dépôt public.
 
 ### Ce qui a été relevé sur la brochure, et repris
 
-- **Orange `#EB6F25`**, échantillonné sur le logo CIMAT SARTEC et non sur la photo de la brochure :
-  l'éclairage du bureau y fausse tout, le papier blanc y ressort à `#D5DFE0`.
+- **Orange officiel `#FE7201`** (voir la charte plus bas). La première estimation `#EB6F25`,
+  échantillonnée sur le logo, était proche mais fausse.
 - **Coin biseauté** sur les photos (haut-droit) et les encarts orange (haut-gauche).
 - **Petit carré à barre oblique** posé à l'angle des photos.
 - **Trait orange épais et court** au-dessus de chaque titre de section.
@@ -302,3 +302,60 @@ roue des secteurs, vignettes avant/après). Ils restent disponibles dans `poster
 - [ ] Déposer les **5 photos** (voir `photos/A_DEPOSER.md`), puis décommenter les lignes
       `background` correspondantes et retirer les `<span class="lbl">`.
 - [ ] Choisir avec Nathan **laquelle des deux versions** part au secrétariat.
+
+---
+
+## 📗 Charte graphique officielle FOSELEV (fournie le 25/08/2026)
+
+Nathan a déposé `FOSELEV - Charte Graphique.pdf` (8 p.) et
+`Plaquette Maintenance Industrielle.pdf` (4 p.) dans `chartre graphique foselev/`.
+Ce dossier est **volontairement dans `.gitignore`** : une charte graphique est de la
+documentation interne d'entreprise, à ne pas republier sur un dépôt public.
+
+Les approximations de la veille sont donc remplacées par les valeurs officielles.
+
+### Couleurs (charte p.2)
+
+| Rôle | Écran | Impression |
+|---|---|---|
+| **Orange** | `#FE7201` (R254 V114 B1) | CMJN 0/65/90/0, **Pantone 1585**, RAL 2004 |
+| **Gris** | `#747170` | CMJN 0/0/0/65, Cool Gray 10, RAL 7016 |
+| **Anthracite** | `#3C3C3B` | CMJN 0/0/0/90, Black 7, RAL 7026 |
+| **Blanc** | `#FFFFFF` | RAL 9010 |
+
+⚠️ **Règle explicite de la charte (p.3)** : ne jamais mettre de contenu **orange sur gris clair**,
+ni l'inverse. Le contraste est insuffisant.
+
+### Polices (charte p.6)
+
+La charte prescrit **Century Gothic** et **Kozuka Gothic Pro** ; **Futura Extra Black** est
+réservée aux logos de filiales. Kozuka Gothic Pro est une police Adobe, absente de Windows.
+
+Le `pdffonts` de la plaquette officielle tranche la question : elle utilise en réalité
+**Century Gothic** (Regular et Bold) et **Impact** pour les gros titres. C'est donc ce couple qui
+est repris, et les deux sont installées d'origine sur Windows.
+
+| Rôle | Police retenue |
+|---|---|
+| Gros titre | **Impact** |
+| Titres de section et texte courant | **Century Gothic** |
+
+Franklin Gothic Heavy, retenu la veille faute de mieux, est abandonné.
+
+### Pictogrammes (charte p.6)
+
+Les pictogrammes FOSELEV sont **ronds**, pas carrés : cercle plein orange à glyphe blanc, ou
+cercle blanc à contour et glyphe orange. Les pastilles du poster ont été passées en cercles.
+
+### Images
+
+`pdfimages` sur la plaquette donne **une seule photo vraiment exploitable** (1290 × 1536, site
+industriel avec opérateur FOSELEV) et une bande d'engrenages (1104 × 306). Toutes les autres sont
+sous 411 px. La plaquette **ne contient aucune photo de TIG orbital**.
+
+⚠️ **Définition juste suffisante pour la projection, faible pour l'impression** : sur 1200 mm de
+large, la photo du bandeau tombe à environ 27 ppp.
+
+⚠️ **Pas d'images prises sur internet.** Le dépôt est public et le poster passe devant un jury :
+reprendre une photo d'un site de constructeur ou d'un moteur de recherche, c'est reprendre une
+œuvre protégée sans licence. Voir `photos/A_DEPOSER.md` pour les trois options propres.

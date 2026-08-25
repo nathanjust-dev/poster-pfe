@@ -1,23 +1,50 @@
-# Photos à déposer ici
+# Photos du poster version brochure
 
-Le poster version brochure attend **5 images**, en **paysage**, bien définies
-(1600 px de large minimum, 2400 px c'est mieux).
+## Déjà en place
 
-| Fichier | Emplacement | Ce qui marche le mieux |
+Deux images viennent de la **plaquette officielle FOSELEV**
+(`chartre graphique foselev/Plaquette Maintenance Industrielle.pdf`), extraites avec `pdfimages`.
+Ce sont des photos FOSELEV, déjà publiées par l'entreprise dans son propre document commercial.
+
+| Fichier | Où | Définition | Remarque |
+|---|---|---|---|
+| `hero.png`    | grand bandeau | 1290 × 1536 | Site industriel, opérateur FOSELEV. Recadrée à 32 % de hauteur. |
+| `company.png` | panneau 1 | 1104 × 306 | Bande d'engrenages, maintenance mécanique. |
+
+⚠️ **Définition juste suffisante pour la projection, faible pour l'impression.** Sur un poster
+de 1200 mm de large, `hero.png` tombe à environ 27 points par pouce. Très bien sur vidéoprojecteur,
+visiblement flou si le poster est imprimé en grand format.
+
+## Encore attendues
+
+| Fichier | Où | Ce qui marche le mieux |
 |---|---|---|
-| `hero.jpg`    | grand bandeau sous les logos | Une photo **sombre et large** : soudeur à l'arc, atelier en contre-jour. Le titre orange se pose dessus à gauche, l'identité à droite, donc il faut du calme au centre. |
-| `company.jpg` | panneau 1, « The company » | Vue d'atelier ou ligne de tuyauterie assemblée. |
-| `process.jpg` | panneau 2, « Orbital TIG welding » | Gros plan de soudage sur tube, torche ou tête en place. |
-| `change.jpg`  | panneau 3, « What would change » | Cordon de soudure, contrôle visuel, ou pièce finie. |
-| `site.jpg`    | panneau orange, en bas | Petite vignette : intervention sur site, ciel dégagé. |
+| `process.jpg` | panneau 2, « Orbital TIG welding » | Gros plan de soudage sur tube, torche ou tête orbitale en place. |
+| `change.jpg`  | panneau 3, « What would change » | Cordon de soudure fini, ou contrôle visuel d'une soudure. |
+| `site.jpg`    | panneau orange, en bas | Petite vignette : intervention sur site. |
 
-## Une fois les photos déposées
+La plaquette FOSELEV **ne contient aucune photo de TIG orbital**, donc ces trois-là ne peuvent pas
+en être tirées.
 
-Dans `poster_brochure.html`, chaque emplacement porte un commentaire
-`PHOTO n :` avec la ligne `background` à décommenter. Il suffit de la décommenter
-et de supprimer le `<span class="lbl">` correspondant, puis de régénérer avec
-`generer_poster_brochure.bat`.
+## Pourquoi pas des images prises sur internet
 
-⚠️ Le dépôt GitHub est **public**. Vérifier qu'aucune photo ne montre une
-installation client identifiable, un logo de donneur d'ordre, ou un visage
-reconnaissable sans accord.
+Le dépôt est **public** et le poster passe devant un jury. Reprendre une photo trouvée sur un
+moteur de recherche, un site de constructeur ou une page de fournisseur, c'est reprendre une œuvre
+protégée sans licence. Trois options propres, par ordre de préférence :
+
+1. **Tes propres photos**, prises au téléphone à l'atelier. Dix minutes, aucun risque, et c'est
+   ton travail que le jury voit.
+2. **Photos FOSELEV** issues de la plaquette ou fournies par la communication du groupe.
+3. **Images sous licence libre** explicite (Creative Commons, domaine public), avec la mention
+   d'attribution imposée par la licence portée sur le poster. Utilisable mais moins élégant :
+   il faut afficher le crédit.
+
+## Comment brancher une photo
+
+Dans `poster_brochure.html`, remplacer le bloc de l'emplacement concerné par :
+
+    <div class="ph" style="background: url('photos/process.jpg') center / cover no-repeat">
+      <span class="slash"></span>
+    </div>
+
+puis régénérer avec `generer_poster_brochure.bat`.

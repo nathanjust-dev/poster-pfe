@@ -26,20 +26,20 @@
   @page { size: 1200mm 675mm; margin: 0; }
 
   :root {
-    --orange:   #EB6F25;
-    --orange-d: #C85A16;
-    --ink:      #1A1A1A;
-    --grey:     #58595B;
-    --grey-l:   #8E8F91;
+    --orange:   #FE7201;   /* charte FOSELEV, Pantone 1585 */
+    --orange-d: #D45F00;
+    --ink:      #3C3C3B;   /* charte, Black 7 */
+    --grey:     #747170;   /* charte, Cool Gray 10 */
+    --grey-l:   #9A9796;
     --rule:     #DEDEDE;
-    --dark:     #26282C;
+    --dark:     #3C3C3B;
 
-    /* Century Gothic = equivalent Windows du geometrique de la brochure */
-    --title:   "Century Gothic", Questrial, Futura, "Gill Sans MT", sans-serif;
-    /* Franklin Gothic Heavy = le gras du titre de couverture. ATTENTION : les noms
-       "Franklin Gothic Demi Cond" et "... Medium Cond" ne resolvent PAS sous Chrome. */
-    --display: "Franklin Gothic Heavy", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
-    --body:    Corbel, Candara, "Gill Sans MT", sans-serif;
+    /* Charte FOSELEV p.6 : Century Gothic + Kozuka Gothic Pro (absente de Windows).
+       La plaquette officielle utilise Century Gothic + Impact pour les gros titres. */
+    --title:   "Century Gothic", Questrial, Futura, sans-serif;
+    /* Impact : c est la police des gros titres de la plaquette officielle (verifie au pdffonts). */
+    --display: Impact, "Franklin Gothic Heavy", "Arial Narrow", sans-serif;
+    --body:    "Century Gothic", Corbel, sans-serif;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -72,14 +72,13 @@
   .hero {
     height: 168mm; flex: none; position: relative;
     background: var(--dark);
-    /* PHOTO 1 : decommenter la ligne suivante une fois photos/hero.jpg depose
-       background: url('photos/hero.jpg') center 40% / cover no-repeat; */
+    background: url('photos/hero.png') center 32% / cover no-repeat;
     overflow: hidden;
   }
   .hero::after {
     /* voile sombre pour que le texte blanc reste lisible sur la photo */
     content: ""; position: absolute; inset: 0;
-    background: linear-gradient(90deg, rgba(20,20,20,0.78) 0%, rgba(20,20,20,0.42) 55%, rgba(20,20,20,0.62) 100%);
+    background: linear-gradient(90deg, rgba(40,40,39,0.88) 0%, rgba(40,40,39,0.52) 48%, rgba(40,40,39,0.90) 100%);
   }
   .hero > * { position: relative; z-index: 2; }
 
@@ -100,7 +99,7 @@
   }
   h1 {
     font-family: var(--display);
-    font-size: 34mm; line-height: 1.04; font-weight: 400;
+    font-size: 41mm; line-height: 1.02; font-weight: 400;
     text-transform: uppercase; letter-spacing: 0.4mm;
   }
   .heroid {
@@ -165,13 +164,14 @@
   .rows { display: flex; flex-direction: column; gap: 5.5mm; }
   .row { display: flex; align-items: flex-start; gap: 6mm; }
   .tile {
-    flex: none; width: 22mm; height: 22mm; border-radius: 1.6mm;
+    /* charte p.6 : les pictogrammes FOSELEV sont RONDS */
+    flex: none; width: 22mm; height: 22mm; border-radius: 50%;
     background: var(--orange);
     display: flex; align-items: center; justify-content: center;
   }
   .panel.orange .tile { background: #fff; }
   .tile svg { width: 13mm; height: 13mm; display: block; }
-  .row p { font-size: 10.2mm; color: var(--grey); padding-top: 1.4mm; }
+  .row p { font-size: 9.6mm; color: var(--grey); padding-top: 1.4mm; }
   .panel.orange .row p { color: #FFF1E8; }
   .row p b { color: var(--ink); font-weight: 700; }
   .panel.orange .row p b { color: #fff; }
@@ -186,11 +186,11 @@
     font-family: var(--title); font-size: 8.4mm; font-weight: 700;
     letter-spacing: 1.4mm; text-transform: uppercase; margin-bottom: 3mm;
   }
-  .tag p { font-size: 9.6mm; color: #FFEEE3; }
+  .tag p { font-size: 9.2mm; color: #FFEEE3; }
 
   /* ---------------- PANNEAU RESULTAT ---------------- */
   .verdict {
-    font-family: var(--display); font-size: 23mm; line-height: 1.06; font-weight: 400;
+    font-family: var(--display); font-size: 28mm; line-height: 1.04; font-weight: 400;
     text-transform: uppercase; margin-bottom: 5mm;
   }
   .verdict-note { font-size: 9.6mm; color: #FFEEE3; margin-bottom: 10mm; }
@@ -232,11 +232,6 @@
 
   <!-- ============ HERO ============ -->
   <div class="hero">
-    <div class="ph lbl" style="position:absolute; inset:0; height:100%; margin:0; clip-path:none;
-         display:flex; align-items:center; justify-content:center; z-index:1;">
-      <span class="lbl" style="font-size:9mm">Photo 1 &middot; bandeau &middot; photos/hero.jpg</span>
-    </div>
-
     <div class="herotitle">
       <div class="kicker">Final Year Engineering Project</div>
       <div class="titleblock">
@@ -258,8 +253,7 @@
 
     <!-- ---------- 1. L'ENTREPRISE ---------- -->
     <section class="panel first">
-      <div class="ph">
-        <span class="lbl">Photo 2<br>photos/company.jpg</span>
+      <div class="ph" style="background: url('photos/company.png') center / cover no-repeat">
         <span class="slash"></span>
       </div>
       <div class="bar"></div>
