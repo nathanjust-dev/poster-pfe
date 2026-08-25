@@ -5,7 +5,7 @@
 - **Type** : poster de présentation du Projet de Fin d'Études, projeté face au jury en fin de soutenance
 - **Étudiant** : JUST Nathan, Polytech Montpellier, 5ᵉ année MSI, promotion 2023-2026
 - **Entreprise** : CIMAT SARTEC (groupe FOSELEV), Les Angles (30133)
-- **Tuteur entreprise** : Hugo PAGANO — **Tuteur académique** : Éric ANGLARET
+- **Tuteur entreprise** : Hugo PAGANO. **Tuteur académique** : Éric ANGLARET
 - **Sujet** : mise en œuvre du procédé de soudage TIG orbital
 - **Mémoire associé** : https://github.com/nathanjust-dev/memoire-pfe (privé)
 
@@ -20,7 +20,7 @@ secrétariat, et déposé dans MOODLE « MSI5 PFE ».
 |---|---|
 | Rédigé **en anglais** | ✅ |
 | **Format paysage**, PDF, lisible sur vidéoprojecteur | ✅ 1200 × 675 mm (16:9), 1 page, vectoriel |
-| **Lisible à 2 m** environ | ✅ corps à 10,2 mm sur 1200 mm de large |
+| **Lisible à 2 m** environ | ✅ corps à 11 mm sur 1200 mm de large, et surtout très peu de texte |
 | Identification de l'apprenti (nom, promotion) | ✅ bandeau d'identification |
 | Présentation de l'entreprise (coordonnées, activités, organisation) | ✅ colonne 1 |
 | **Photo d'une ou plusieurs réalisations caractéristiques** | ⏳ **EN ATTENTE** (emplacement réservé) |
@@ -28,53 +28,80 @@ secrétariat, et déposé dans MOODLE « MSI5 PFE ».
 | Logo **CFA ENSUP-LR** | ✅ |
 | Logo **FRANCE CHAUDRONNERIE** | ✅ |
 | Logo entreprise (CIMAT SARTEC) | ✅ |
-| Travail effectué, **état des lieux avant / après** | ✅ colonne 2 |
+| Travail effectué, **état des lieux avant / après** | ✅ colonne 3, en trois vignettes dessinées |
 | Perspectives | ✅ colonne 3 |
 
 ---
 
-## 🎨 Règles de rédaction et de mise en forme (décidées avec Nathan)
+## 🎨 Règles de conception (décidées avec Nathan)
 
-1. **Aucun tableau, aucune liste à puces.** Tout le contenu du poster est rédigé **en prose**.
-   L'avant/après passe par deux blocs de texte contrastés (gris « today » / orangé « would change »),
-   pas par une grille.
-2. **Ton humain**, à la première personne quand c'est naturel. Pas de style « fiche technique ».
-3. ⛔ **Tiret cadratin `—` (U+2014) interdit**, comme dans le mémoire. Vérification :
-   `pdftotext Poster_PFE_Nathan_JUST.pdf - | grep -c "—"` doit renvoyer `0`.
-4. **Aucun chiffre financier de l'étude** (investissement, taux horaire vendu, seuil de rentabilité,
+1. **Le poster est GRAPHIQUE, pas rédigé.** Le jury doit comprendre **en un coup d'œil** : le
+   mémoire est là pour le détail, personne ne va lire un poster pendant quinze minutes. Le procédé
+   est **dessiné** (SVG maison), pas décrit. Budget de texte : **environ 130 mots** sur tout le
+   poster. Toute idée qui peut être dessinée doit l'être.
+2. **Aucun tableau, aucune liste à puces.** L'avant/après passe par **trois vignettes dessinées**
+   (cordon irrégulier vers cordon régulier, barre pleine vers demi-barre, page manuscrite vers page
+   imprimée), chacune avec une légende de six mots.
+3. **Humain, jamais futuriste ni robotique.** Pas de fond sombre, pas de dégradé, pas de néon, pas
+   de géométrie « tech ». Fond **papier crème**, encre **brun-noir**, icônes au trait avec angles
+   arrondis, **un seul orange**.
+4. **Ton humain** dans le peu de texte restant, à la première personne quand c'est naturel.
+5. ⛔ **Tiret cadratin `—` (U+2014) interdit**, comme dans le mémoire.
+6. **Aucun chiffre financier de l'étude** (investissement, taux horaire vendu, seuil de rentabilité,
    temps de retour). Décision de Nathan le 25/08. Les gains de temps sont exprimés **en relatif**
-   (« roughly halved »), jamais en heures.
-5. **Chiffres du groupe FOSELEV autorisés** (1970, ~3 300 collaborateurs, ~570 millions d'euros) :
-   données publiques de présentation d'entreprise.
-6. **Taux de reprise adouci.** Le mémoire dit « une soudure sur deux à trois ». Sur le poster :
-   « part of the radiographed welds still has to be taken up again », sans ratio. Le jury peut
+   (« roughly half »), jamais en heures.
+7. **Chiffres du groupe FOSELEV autorisés** (1970, ~3 300 collaborateurs) : données publiques de
+   présentation d'entreprise.
+8. **Taux de reprise adouci.** Le mémoire dit « une soudure sur deux à trois ». Sur le poster, la
+   vignette montre seulement un cordon irrégulier qui devient régulier, sans ratio. Le jury peut
    compter des donneurs d'ordres, et Nathan ne veut pas de question piège là-dessus.
-7. ⚠️ **Ne jamais citer de client ni de concurrent** (règle héritée du mémoire). Seul fournisseur
+9. ⚠️ **Ne jamais citer de client ni de concurrent** (règle héritée du mémoire). Seul fournisseur
    nommable : Orbitalum, et il n'est pas nommé sur le poster.
-8. **Le « après » est un état cible, pas un existant.** La machine n'est pas achetée : le poster dit
-   « would change », « proposed », jamais « we now do ».
+10. **Le « après » est un état cible, pas un existant.** La machine n'est pas achetée : le poster dit
+    « would change », jamais « we now do ».
 
 ### Typographie
 
-- **Cambria** (serif) : titre, intertitres en italique, accroches, encadré recommandation.
-- **Candara** (sans-serif humaniste) : texte courant.
-- Les deux sont installées d'origine sur Windows et **embarquées dans le PDF** (`pdffonts` doit
-  afficher `emb yes` partout), donc le rendu est identique sur le poste du secrétariat.
+- **Cambria** (serif) : titre, intertitres, noms, encadré recommandation.
+- **Candara** (sans-serif humaniste) : texte courant et libellés.
+- Les deux sont installées d'origine sur Windows et **embarquées dans le PDF**, donc le rendu est
+  identique sur le poste du secrétariat et sur le vidéoprojecteur.
 - ❌ Segoe UI / Helvetica / Inter écartées : jugées trop génériques par Nathan (« ça fait IA »).
+- ⚠️ **Piège** : Candara ne possède pas le glyphe `→`. Un `&rarr;` en HTML faisait retomber Chrome
+  sur **Segoe UI Bold**, qui se retrouvait embarqué dans le PDF. Les flèches sont donc **dessinées
+  en SVG**. Toujours vérifier avec `pdffonts` qu'il n'y a que du Cambria et du Candara.
 
 ### Palette
 
 | Rôle | Valeur |
 |---|---|
-| Encre | `#1B2733` |
-| Encre secondaire | `#46545F` |
+| Papier (fond) | `#FBF8F3` |
+| Papier secondaire / tertiaire | `#F3EDE4` / `#E7DED2` |
+| Encre | `#2B2724` |
+| Encre secondaire | `#6B625A` |
 | Accent orange | `#D9531E` (repris des logos FRANCE CHAUDRONNERIE et CIMAT SARTEC) |
-| Accent foncé (intertitres) | `#A93D11` |
-| Bleu (secteur S4) | `#2E7CBF` |
-| Fonds | `#F4F7F9` / `#EDF1F5` / `#FCF4EF` |
+| Accent clair (collier de la tête) | `#F6E3D8` |
+| Pierre (l'état « avant ») | `#A79C90` |
+| Bleu doux (secteur S4) | `#6E8CA0` |
 
 Un seul aplat orange plein sur tout le poster : l'encadré **Recommendation**. C'est volontaire,
 c'est la conclusion.
+
+---
+
+## 🖌️ Les dessins (tous en SVG inline dans `poster.html`)
+
+| Dessin | Emplacement | Ce qu'il montre |
+|---|---|---|
+| Tube + tête orbitale | colonne 2, dessin principal | Le collier fermé autour du tube, le moteur posé dessus, le point orange de la torche et son trajet dans la bande du collier. Deux annotations : « the head turns » et « the tube stays put ». |
+| Roue des secteurs | colonne 2 | S1 à S4, une couleur par position de soudage, flèche du sens de rotation. |
+| Cordon de soudure | colonne 3, vignette 1 | Bosses irrégulières en gris vers bosses régulières en orange. |
+| Temps de soudage | colonne 3, vignette 2 | Barre pleine vers demi-barre. |
+| Traçabilité | colonne 3, vignette 3 | Page gribouillée à la main vers page imprimée. |
+| Métiers | colonne 1 | Coude de tuyauterie à brides, virole, ferme de charpente. |
+
+Aucune image externe n'est reprise (ni Polysoude, ni l'article Applied Sciences du mémoire) : tout
+est redessiné, donc **aucune question de crédit d'image** devant le jury.
 
 ---
 
@@ -100,20 +127,25 @@ fixé côté CSS (`@page { size: 1200mm 675mm; margin: 0; }`), Chrome le respect
     chrome.exe --headless=new --disable-gpu --no-pdf-header-footer ^
       --print-to-pdf="Poster_PFE_Nathan_JUST.pdf" "file:///.../poster.html"
 
-Ou plus simplement : **double-cliquer sur `generer_poster.bat`**.
+Ou plus simplement : **double-cliquer sur `generer_poster.bat`**, qui détecte aussi le verrou
+ci-dessous.
+
+⚠️ **Piège majeur** : si `Poster_PFE_Nathan_JUST.pdf` est **ouvert dans un lecteur PDF**, Windows
+verrouille le fichier et Chrome échoue avec « le processus ne peut pas accéder au fichier ».
+**Fermer le PDF avant de régénérer.**
+
+⚠️ **Second piège** : le contenu est en flux, donc **une colonne déborde en silence** dès qu'on
+ajoute deux lignes. Aucune alerte, le bas est simplement coupé. **Toujours** régénérer l'aperçu PNG
+et **le regarder**.
 
 ### Vérifications après chaque génération
 
-    pdfinfo Poster_PFE_Nathan_JUST.pdf      # doit dire : Pages 1, Page size 3402 x 1913.04 pts
-    pdffonts Poster_PFE_Nathan_JUST.pdf     # toutes les polices en "emb yes"
+    pdfinfo Poster_PFE_Nathan_JUST.pdf      # Pages 1, Page size 3402 x 1913.04 pts
+    pdffonts Poster_PFE_Nathan_JUST.pdf     # QUE du Cambria et du Candara, tous en "emb yes"
     pdftotext Poster_PFE_Nathan_JUST.pdf - | grep -c "—"   # doit renvoyer 0
     pdftoppm -png -r 34 Poster_PFE_Nathan_JUST.pdf apercu  # et REGARDER l'image
 
-⚠️ **Piège récurrent** : le texte est en flux, donc **la colonne 2 déborde dès qu'on ajoute deux
-lignes**. Il n'y a pas d'alerte, le contenu est simplement coupé en bas. **Toujours** régénérer
-l'aperçu PNG et le regarder après une modification de texte.
-
-Poppler (`pdfinfo`, `pdffonts`, `pdftoppm`, `pdftotext`) est installé ici :
+Poppler est installé ici :
 `C:\Users\nathan.just\AppData\Local\Microsoft\WinGet\Packages\oschwartz10612.Poppler_*\poppler-*\Library\bin`
 
 ---
@@ -127,36 +159,42 @@ Poppler (`pdfinfo`, `pdffonts`, `pdftoppm`, `pdftotext`) est installé ici :
 ### 25/08/2026 — Cadrage
 
 Lecture des consignes et du mémoire (parties 1 à 8) pour en extraire le contenu. Décisions prises
-avec Nathan :
-
-- format **16:9** plutôt que A1/A0, parce que la consigne parle explicitement de projection ;
-- **pas d'organigramme** sur le poster (illisible à 2 m une fois réduit), remplacé par une phrase ;
-- photos de réalisation **à fournir par Nathan** ;
-- **aucun chiffre financier**, colonne 3 entièrement qualitative ;
-- gains de temps **en relatif**.
+avec Nathan : format **16:9** plutôt que A1/A0 (la consigne parle de projection), **pas
+d'organigramme** (illisible à 2 m une fois réduit), photos de réalisation **à fournir par Nathan**,
+**aucun chiffre financier**, gains de temps **en relatif**.
 
 ### 25/08/2026 — v1 (abandonnée)
 
-Structure en 3 colonnes, tableau avant/après, listes à puces, police Segoe UI. Rejetée par Nathan :
-**« la police fait trop IA »**, et **pas de tableau ni de liste à puces**.
+Trois colonnes, tableau avant/après, listes à puces, police Segoe UI. Rejetée : **« la police fait
+trop IA »**, et **pas de tableau ni de liste à puces**.
 
-### 25/08/2026 — v2 (état actuel)
+### 25/08/2026 — v2 (abandonnée)
 
-- typographie refaite en **Cambria + Candara** ;
-- **tableau et puces supprimés**, tout réécrit en prose à la première personne ;
-- avant/après transformé en deux blocs contrastés ;
-- schéma des secteurs S1-S4 **redessiné en SVG maison** (pas de reprise de l'image Polysoude du
-  mémoire, donc pas de question de crédit d'image), étiquettes périphériques basculées dans la
-  légende pour agrandir le cercle et rester lisible à 2 m ;
-- corps ramené de 10,6 à 10,2 mm pour que la colonne 2 tienne sans couper de contenu.
+Typographie refaite en **Cambria + Candara**, tableau et puces supprimés, tout réécrit en prose à la
+première personne, avant/après en deux blocs de texte contrastés, roue des secteurs redessinée en
+SVG. Rejetée à son tour : **encore beaucoup trop de texte** (environ 600 mots). Retour de Nathan :
+« le but d'un poster c'est de comprendre en un coup d'œil, le jury ne va pas prendre quinze minutes
+pour tout lire, il y a déjà le rapport pour ça ».
+
+### 25/08/2026 — v3 (état actuel) — **premier commit**
+
+Bascule en **poster graphique**. Le texte tombe d'environ 600 à **130 mots**.
+
+- **dessin principal** du tube avec la tête orbitale en collier, le point de torche et son trajet ;
+- **avant/après devenu trois vignettes dessinées** au lieu de deux pavés de texte ;
+- passage à une **palette papier chaud** (fond crème, encre brun-noir) pour tuer l'effet écran ;
+- **icônes des trois métiers** dessinées pour la colonne entreprise ;
+- flèches `→` remplacées par des **flèches SVG** (voir le piège Segoe UI plus haut) ;
+- détection du **verrou PDF** ajoutée dans `generer_poster.bat`.
 
 ---
 
 ## ⏳ Reste à faire
 
 - [ ] **Photo(s) de réalisation** à déposer dans le dossier, puis à intégrer dans `poster.html` à la
-      place du bloc `.photo` (remplacer le contenu par `<img src="assets/...">`).
+      place du bloc `.photo` (remplacer son contenu par `<img src="assets/...">`).
 - [ ] Légende de la photo à arrêter avec Nathan.
-- [ ] Valider la traduction « CIMAT SARTEC, Rhône Valley branch ».
+- [ ] Valider la traduction « CIMAT SARTEC, Rhône Valley branch » (actuellement non reprise sur le
+      poster, seul « CIMAT SARTEC » apparaît).
 - [ ] Relecture orthographique anglaise finale.
 - [ ] Envoi au tuteur pédagogique et au secrétariat + dépôt MOODLE « MSI5 PFE » avant le **28/08**.
