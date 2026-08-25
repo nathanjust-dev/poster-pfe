@@ -20,7 +20,7 @@ secrétariat, et déposé dans MOODLE « MSI5 PFE ».
 |---|---|
 | Rédigé **en anglais** | ✅ |
 | **Format paysage**, PDF, lisible sur vidéoprojecteur | ✅ 1200 × 675 mm (16:9), 1 page, vectoriel |
-| **Lisible à 2 m** environ | ✅ corps à 11 mm sur 1200 mm de large, et surtout très peu de texte |
+| **Lisible à 2 m** environ | ✅ corps à 11 mm sur 1200 mm de large, et texte tenu court |
 | Identification de l'apprenti (nom, promotion) | ✅ bandeau d'identification |
 | Présentation de l'entreprise (coordonnées, activités, organisation) | ✅ colonne 1 |
 | **Photo d'une ou plusieurs réalisations caractéristiques** | ⏳ **EN ATTENTE** (emplacement réservé) |
@@ -37,7 +37,7 @@ secrétariat, et déposé dans MOODLE « MSI5 PFE ».
 
 1. **Le poster est GRAPHIQUE, pas rédigé.** Le jury doit comprendre **en un coup d'œil** : le
    mémoire est là pour le détail, personne ne va lire un poster pendant quinze minutes. Le procédé
-   est **dessiné** (SVG maison), pas décrit. Budget de texte : **environ 130 mots** sur tout le
+   est **dessiné** (SVG maison), pas décrit. Budget de texte : **environ 240 mots** sur tout le
    poster. Toute idée qui peut être dessinée doit l'être.
 2. **Aucun tableau, aucune liste à puces.** L'avant/après passe par **trois vignettes dessinées**
    (cordon irrégulier vers cordon régulier, barre pleine vers demi-barre, page manuscrite vers page
@@ -224,3 +224,22 @@ main via l'API :
 toute modification faite ici doit être reportée à la main dans le HTML, sinon les deux divergent.
 Si le HTML évolue, le plus simple est de **réimporter** et de refaire les trois corrections
 ci-dessus, plutôt que d'essayer de synchroniser.
+
+### 25/08/2026 — v3.1
+
+Nathan trouvait la v3 **trop vide**. Ajout d'environ 110 mots, sans revenir au pavé de la v2 :
+
+- phrase d'accroche en tête de la colonne 2 (le problème : tout est soudé à la main, les clients
+  demandent régularité et traçabilité) ;
+- **le point normatif réintroduit** dans la colonne 3. Il avait entièrement disparu en v3 alors
+  que le jury va poser la question : qualification du mode opératoire, puis des opérateurs selon
+  ISO 14732, puis les contrôles ;
+- une sous-légende sous chacune des trois vignettes ;
+- légendes des deux dessins de la colonne 2 complétées d'une phrase ;
+- colonne 1 : ce que faisait Nathan et comment le sujet lui est arrivé ;
+- perspectives : la bibliothèque de programmes comme capital technique.
+
+Budget de texte révisé : **environ 240 mots** (contre 130 en v3 et 600 en v2).
+
+⚠️ **La copie Canva `DAHTRv_HTzk` est désormais périmée** : elle contient la v3. Réimporter et
+refaire les trois corrections de conversion si on veut la remettre à niveau.
