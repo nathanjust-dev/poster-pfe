@@ -198,3 +198,29 @@ Bascule en **poster graphique**. Le texte tombe d'environ 600 à **130 mots**.
       poster, seul « CIMAT SARTEC » apparaît).
 - [ ] Relecture orthographique anglaise finale.
 - [ ] Envoi au tuteur pédagogique et au secrétariat + dépôt MOODLE « MSI5 PFE » avant le **28/08**.
+
+---
+
+## 🎨 Copie Canva (25/08/2026)
+
+Le PDF a été importé dans Canva depuis l'URL brute GitHub (le dépôt est public depuis le 25/08,
+ce qui rend l'import possible : l'outil Canva exige une URL publique en HTTPS et refuse les
+fichiers locaux).
+
+- **Design id** : `DAHTRv_HTzk`, titre « Poster PFE - Nathan JUST - Orbital TIG Welding »
+- **Géométrie conservée à l'identique** : page de 4536 × 2551 px, soit exactement 1200 × 675 mm.
+
+⚠️ **L'import PDF vers Canva est LOSSY sur le texte.** Trois défauts constatés et corrigés à la
+main via l'API :
+
+1. une **ligne vide de 98 px** injectée entre les deux lignes du titre (le `<br>` du HTML est
+   devenu un saut de paragraphe plus une ligne vide), ce qui poussait le sous-titre sur le bandeau
+   d'identification ;
+2. la légende de l'encadré recommandation avait **perdu toutes ses espaces**
+   (`Weldingtimestobeconfirmed...`), symptôme classique d'extraction de texte PDF au crénage ;
+3. une **espace parasite** avant une virgule dans la légende de la roue (`flat , vertical down`).
+
+**Le master reste `poster.html`.** La copie Canva est un instantané : elle ne se régénère pas, et
+toute modification faite ici doit être reportée à la main dans le HTML, sinon les deux divergent.
+Si le HTML évolue, le plus simple est de **réimporter** et de refaire les trois corrections
+ci-dessus, plutôt que d'essayer de synchroniser.
