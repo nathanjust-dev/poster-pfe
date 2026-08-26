@@ -413,3 +413,49 @@ Nathan a fourni trois photos qui remplacent la plupart de mes trouvailles Wikime
 **photos produit protégées**. Nathan les a fournies en connaissance de cause et Orbitalum est le
 fournisseur retenu dans le mémoire, donc c'est cohérent. Pour une diffusion plus large que le
 jury, demander l'accord du fournisseur ou les remplacer par des photos d'atelier.
+
+---
+
+## ⚠️ RÈGLE DE FOND : le procédé N'EST PAS installé (25/08/2026)
+
+Nathan a repéré un problème sérieux : le poster laissait croire que le TIG orbital tournait déjà
+à l'atelier. **Ce n'est pas le cas.** Le PFE est une **étude d'aide à la décision**, remise à la
+direction, qui ne s'est pas encore prononcée. Un membre du jury pouvait légitimement demander
+« depuis quand soudez-vous en orbital ? » et Nathan se serait retrouvé en porte-à-faux.
+
+### Cadrage retenu : l'avant/après porte sur L'ÉTUDE, pas sur l'atelier
+
+La consigne demande un état des lieux avant/après le projet. Le projet, c'est l'étude. Donc :
+
+- **Avant** : l'orbital était une intuition que personne n'avait chiffrée. Pas d'analyse
+  technique, pas de plan, pas d'offre.
+- **Après** : un dossier de décision complet, analyse technique, chemin normatif ISO 14732,
+  offre fournisseur, chiffrage.
+- **Sur la table** : une recommandation argumentée, prête à être tranchée par la direction.
+- **Attendu à l'atelier** : les gains, formulés comme une **attente**, jamais comme un fait.
+
+C'est plus honnête, et ça met en valeur le travail de Nathan plutôt qu'une machine qui n'existe
+pas encore.
+
+### Ce qui a été corrigé dans les DEUX versions
+
+| Avant | Après |
+|---|---|
+| « Tomorrow: programmed travel, a bead that comes out the same every time » | « **Expected in the workshop**: a bead that repeats… » |
+| « Roughly half the welding time » | « **Expected**: roughly half the welding time » |
+| « Every weld recorded by the machine » | « **Welds recorded** by the machine » (conditionnel assumé) |
+| Encart « Compliance path » | Encart **« Status »** : *The process is not installed. The study was delivered, and the decision sits with the management team.* |
+| « What comes next » | **« If it goes ahead »** |
+| Note sous la recommandation | *That is the conclusion of the study, not a decision already taken.* |
+
+⛔ **À ne jamais réintroduire** : une formulation au présent de l'indicatif décrivant l'atelier
+équipé en orbital. Tant que la direction n'a pas tranché, tout ce qui concerne l'après est au
+conditionnel ou explicitement étiqueté « expected ».
+
+### Piège technique rencontré au passage
+
+Après un `git pull`, Git réécrit les fichiers modifiés en **CRLF** (`core.autocrlf` sous Windows).
+Les motifs `perl -0pi -e` avec des `\n` **cessent alors de matcher en silence** : la commande
+réussit, mais ne remplace rien. Symptôme : la substitution « passe » et le rendu ne change pas.
+Utiliser l'outil d'édition plutôt que `perl` sur un fichier fraîchement récupéré, ou vérifier
+systématiquement avec un `grep` après substitution.

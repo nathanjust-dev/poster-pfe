@@ -157,6 +157,8 @@
     font-size: 16mm; font-weight: 400; line-height: 1.14;
     text-transform: uppercase; letter-spacing: 1.6mm;
     color: var(--ink); margin-bottom: 8mm; flex: none;
+    /* deux lignes reservees pour que les pastilles s alignent d un panneau a l autre */
+    min-height: 36.5mm;
   }
   .panel.orange h2 { color: #fff; }
 
@@ -334,37 +336,39 @@
         <span class="slash"></span>
       </div>
       <div class="bar"></div>
-      <h2>What would change</h2>
+      <h2>Before and after the study</h2>
       <div class="rows">
         <div class="row">
           <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c3-4 6 4 9 0s6 4 9 0"/>
             <path d="M3 9c3-4 6 4 9 0s6 4 9 0"/></svg></span>
-          <p><b>Today</b>: every pipe weld made by hand, the result tied to the welder.</p>
-        </div>
-        <div class="row">
-          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M3 7h18"/>
-            <path d="M3 17h18"/></svg></span>
-          <p><b>Tomorrow</b>: programmed travel, a bead that comes out the same every time.</p>
-        </div>
-        <div class="row">
-          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/>
-            <path d="M12 7v5l3.5 2"/></svg></span>
-          <p>Roughly <b>half the welding time</b> on the joint taken as a reference.</p>
+          <p><b>Before</b>: orbital welding was an idea nobody had costed. No technical assessment,
+             no plan, no offer.</p>
         </div>
         <div class="row">
           <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v18H5z"/>
             <path d="M9 8h6"/><path d="M9 12h6"/><path d="M9 16h3"/></svg></span>
-          <p>Real welding parameters <b>logged automatically</b>, weld after weld.</p>
+          <p><b>After</b>: a complete decision file. Technical assessment, compliance path with
+             ISO 14732, supplier offer, costing.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <p><b>On the table</b>: a quantified recommendation, ready for management to decide.</p>
+        </div>
+        <div class="row">
+          <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3.5 2"/></svg></span>
+          <p><b>Expected in the workshop</b>: a bead that repeats, roughly half the welding time,
+             parameters logged by the machine.</p>
         </div>
       </div>
       <div class="tag">
-        <div class="h">Compliance path</div>
-        <p>Welding procedure qualified first, then the operators to ISO 14732, then the usual
-           inspections. Nothing stands in the way.</p>
+        <div class="h">Status</div>
+        <p>The process is <b>not installed</b>. The study was delivered, and the decision sits with
+           the management team.</p>
       </div>
     </section>
 
@@ -373,11 +377,11 @@
       <div style="height:116mm; flex:none; display:flex; flex-direction:column; justify-content:center">
         <div class="whiterule"></div>
         <div class="verdict">Worth the<br>investment</div>
-        <div class="verdict-note">Welding times to be confirmed by measurement in the workshop
-          before the order is signed.</div>
+        <div class="verdict-note">That is the conclusion of the study, not a decision already taken.
+          Welding times still have to be confirmed by measurement in the workshop.</div>
       </div>
       <div class="bar"></div>
-      <h2>What comes next</h2>
+      <h2>If it goes ahead</h2>
       <div class="rows">
         <div class="row">
           <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#EB6F25" stroke-width="2"
