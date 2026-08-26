@@ -130,6 +130,13 @@ fixé côté CSS (`@page { size: 1200mm 675mm; margin: 0; }`), Chrome le respect
 Ou plus simplement : **double-cliquer sur `generer_poster.bat`**, qui détecte aussi le verrou
 ci-dessous.
 
+⚠️ **Piège n°0, le plus sournois** : Nathan **édite souvent directement sur GitHub**. Le PDF est
+généré à partir du fichier **local**, donc une modification faite en ligne est invisible tant que
+le dépôt n'a pas été récupéré. Symptôme : « j'ai modifié le HTML mais le PDF ne change pas ».
+**Toujours `git fetch` puis `git pull --rebase` AVANT de régénérer.** Contrôle rapide :
+`git status` et `git diff` vides alors qu'une modification est attendue = elle est ailleurs,
+probablement sur le distant.
+
 ⚠️ **Piège majeur** : si `Poster_PFE_Nathan_JUST.pdf` est **ouvert dans un lecteur PDF**, Windows
 verrouille le fichier et Chrome échoue avec « le processus ne peut pas accéder au fichier ».
 **Fermer le PDF avant de régénérer.**
